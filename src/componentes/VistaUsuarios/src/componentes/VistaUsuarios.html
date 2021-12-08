@@ -1,0 +1,46 @@
+
+<section class="src-componentes-vista-usuarios">
+  <div class="jumbotron">
+    <button class="btn btn-success mr-3" @click="getUsuariosAxios()">GET AXIOS</button>
+    <div v-if="vacio" class="table-responsive">
+      <h1 class="alert alert-danger mt-1">No hay usuarios</h1>
+    </div>
+    <div v-else-if="usuariosIngresados.length">
+      
+      
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefono</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(usuario, index) in usuariosIngresados" :key="index">
+            <th scope="col"></th>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.edad }}</td>
+            <td>{{ usuario.email }}</td>
+            <th scope="col"></th>
+
+            
+          </tr>
+          
+          
+          
+          
+        </tbody>
+        
+          
+      </table>
+      
+    
+    </div>
+    
+
+  </div>
+</section>
+
